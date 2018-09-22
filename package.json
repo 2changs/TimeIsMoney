@@ -1,15 +1,24 @@
 {
-  "name": "ramhacks2018",
+  "name": "vinder",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "firebase": "^5.5.1",
+    "react-dom": "^16.5.2",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.5"
+    "react-scripts": "1.1.5",
+    "react-swipe-card": "^0.1.4"
   },
   "dependencies": {
+    "@material-ui/core": "^3.1.0",
+    "@material-ui/icons": "^3.0.1",
+    "hammerjs": "^2.0.8",
     "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "react-native-swiper-animated": "^1.5.1",
+    "react-native-web": "^0.9.0",
+    "react-swipe-deck": "^0.1.17",
+    "react-swipy": "0.0.6"
   },
   "scripts": {
     "start": "react-scripts start",

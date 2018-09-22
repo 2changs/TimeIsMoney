@@ -1,0 +1,14 @@
+.Card {
+  margin-top: 30px;
+  background: whitesmoke;
+  borderRadius: 3;
+  width: 400px;
+  height: 400px;
+  cursor: pointer;
+  userSelect: none;
+  position: absolute;
+  display: flex;
+  alignItems: center;
+  justifyContent: center;
+  top: 0;
+}
