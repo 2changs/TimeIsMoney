@@ -56,30 +56,48 @@ class PersonalInfoChangeForm extends Component {
 
     return (
       <form onSubmit={this.onSubmit}>
-        <TextField
+        <input
+          className="input_field"
           id="margin-none"
-          helperText="First Name"
+          onChange={event => this.setState(updateByPropertyName('first_name', event.target.value))}
+          type="text"
+          placeholder="First Name"
         />
-        <TextField
+        <input          
+          className="input_field"
           id="margin-none"
-          helperText="Last Name"
+          onChange={event => this.setState(updateByPropertyName('last_name', event.target.value))}
+          type="text"
+          placeholder="Last Name"
         />
         <br />
-        <TextField
+        <input         
+           className="input_field"
           id="margin-none"
-          helperText="Address"
+          onChange={event => this.setState(updateByPropertyName('address', event.target.value))}
+          type="text"
+          placeholder="Address"
         />
-        <TextField
+        <input
+         className="input_field"
           id="margin-none"
-          helperText="City"
+          onChange={event => this.setState(updateByPropertyName('city', event.target.value))}
+          type="text"
+          placeholder="City"
         />
-        <TextField
+        <input    
+          className="input_field"
           id="margin-none"
-          helperText="State"
+          onChange={event => this.setState(updateByPropertyName('state', event.target.value))}
+          type="text"
+          placeholder="State"
         />
-        <TextField
+        <input          
+          className="input_field"
           id="margin-none"
-          helperText="Zip"
+          onChange={event => this.setState(updateByPropertyName('zip', event.target.value))}
+          type="text"
+          placeholder="Zip Code"
         />
         <br />
         <Select
@@ -90,7 +108,7 @@ class PersonalInfoChangeForm extends Component {
         />
 
 
-        <button type="submit">
+        <button className="btn" type="submit">
           Update my information
         </button>
       </form>

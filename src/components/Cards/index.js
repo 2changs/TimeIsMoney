@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import Swipeable from "react-swipy"
 import './Cards.css';
  
-import Card from "../Card/";
+import TinderCard from "../TinderCard/";
  
 class Cards extends Component {
   state = {
@@ -33,12 +33,12 @@ class Cards extends Component {
             <div className="Cards">
               <Swipeable
                 onAfterSwipe={this.remove}>
-                <Card imageUrl={cards[0].imageUrl} title={cards[0].title}> </Card>
+                <TinderCard imageUrl={cards[0].imageUrl} title={cards[0].title}> </TinderCard>
               </Swipeable>
-              {cards.length > 1 && <Card zIndex={-1}>{cards[1]}</Card>}
+              {cards.length > 1 && <TinderCard zIndex={-1}>{cards[1]}</TinderCard>}
             </div>
           ) : (
-            <Card zIndex={-2} title={"Refresh Cards"}></Card>
+            <TinderCard zIndex={-2} title={"Refresh Cards"}></TinderCard>
           )}
         </div>
       </div>

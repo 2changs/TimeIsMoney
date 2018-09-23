@@ -7,11 +7,11 @@ import PersonalInfoChangeForm from '../PersonalInfoChangeForm';
 import withAuthorization from '../Session/withAuthorization';
 
 const AccountPage = ({ authUser }) =>
-  <div>
-    <h1>Account: {authUser.email}</h1>
+  <div className="div_form">
+    <h2>Account: {authUser.email}</h2>
     <h2> Personal Information </h2>
     <PersonalInfoChangeForm />
-    <h2> Change Password </h2>
+    <br /> <br />
     <PasswordChangeForm />
   </div>
 
