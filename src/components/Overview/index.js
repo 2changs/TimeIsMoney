@@ -4,13 +4,29 @@ import { compose } from 'recompose';
 
 import withAuthorization from '../Session/withAuthorization';
 import { db } from '../../firebase';
+import { auth } from '../../firebase';
+
 
 class Overview extends Component {
   constructor(props) {
     super(props);
-    db.getRichmond().then(snapshot =>
+    db.getTitle(1).then(snapshot =>
       this.title = snapshot.val()
     );
+    db.getDistance(1).then(snapshot =>
+      this.distance = snapshot.val()
+    );
+    db.getImage(1).then(snapshot =>
+      this.image = snapshot.val()
+    );
+    db.getDescp(1).then(snapshot =>
+      this.descp = snapshot.val()
+    );
+    db.getCat(1).then(snapshot =>
+      this.cat = snapshot.val()
+      );
+    db.addVol(8);
+    db.addCat("Education");
   }
 
   componentDidMount() {
@@ -24,10 +40,14 @@ class Overview extends Component {
   render() {
     const { users } = this.props;
 
+
     return (
       <div>
-        {this.title}
-        
+        Cat: {this.cat}
+        Title: {this.title}
+        Image: {this.image}
+        Distance: {this.distance}
+        Description: {this.descp}
       </div>
         
     );
