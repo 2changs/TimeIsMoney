@@ -13,4 +13,18 @@
 	minHeight: 100vh;
 	fontFamily: sans-serif;
 	overflow: hidden;
+	  padding: 15px;
+  width: 40%;
+  min-width: 320px;
+  max-width: 475px;
+  background: #fff;
+  position: absolute;
+  top: 70%;
+  left: 55%;
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+
 }

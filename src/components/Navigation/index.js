@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 // import PropTypes from 'prop-types';
 import { AppBar, Toolbar, Typography } from '@material-ui/core/';
+import Icon from '@material-ui/core/Icon';
 // import MenuIcon from '@material-ui/icons/Menu';
 import './index.css'
 
@@ -21,8 +22,8 @@ const NavigationAuth = () =>
   <Toolbar>
     <Link className={"logo"} to={routes.HOME}>vinder</Link>
     <div className={"menu"}>
-      <Link to={routes.ACCOUNT}>Account</Link>
-      <Link to={routes.OVERVIEW}>Overview</Link>
+      <Link className="menu_link" to={routes.OVERVIEW}><Icon fontSize="large">toc</Icon></Link>
+      <Link className="menu_link" to={routes.ACCOUNT}><Icon fontSize="large">face</Icon></Link>
     </div>
    <SignOutButton />
   </Toolbar>
