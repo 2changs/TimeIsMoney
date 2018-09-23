@@ -35,3 +35,28 @@ export const addCat = (cat) => {
 	const id = firebase.auth().currentUser.uid;
 	db.ref('users/' + id + '/cat/' + cat).set("true");
 }
+
+export const finalVols = (val) => {
+	return val;
+}
+
+export const getVols = () => {
+	var finalVol = [];
+	var callback = function(val) {
+		finalVol = vols;
+		console.log(finalVol);
+	}
+	var vols = [];
+	var i = 1;
+	db.ref('vol').once('value', function(snapshot) {
+		snapshot.forEach(function(child) {
+    		vols.push(
+    			{
+    				"title" : child.val().title,
+    				"imageUrl" : child.val().img
+    			});
+
+		})
+		finalVols(vols);
+	});
+}

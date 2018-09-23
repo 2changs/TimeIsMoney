@@ -8,11 +8,10 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
-const TinderCard = ({ zIndex = 0, imageUrl, title }) => (
+const TinderCard = ({ zIndex = 0, imageUrl, title, desc, distance, cat }) => (
     <Card className="Card" style={{ zIndex }}>
       <CardActionArea>
         <CardMedia
-          className
           image={"imageUrl"}
           title={title}
         />
@@ -21,17 +20,17 @@ const TinderCard = ({ zIndex = 0, imageUrl, title }) => (
             {title}
           </Typography>
           <Typography component="p">
-            description
+            {desc}
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions className="actions">
-        <Button size="small" color="primary">
-          Share
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
-        </Button>
+        <p>
+          {distance}
+        </p>
+        <p>
+          {cat}
+        </p>
       </CardActions>
     </Card>
 );
