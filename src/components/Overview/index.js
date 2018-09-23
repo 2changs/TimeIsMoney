@@ -8,6 +8,7 @@ import ListSubheader from '@material-ui/core/ListSubheader';
 import IconButton from '@material-ui/core/IconButton';
 import InfoIcon from '@material-ui/icons/Info';
 import tileData from './dummy';
+import './index.css';
 
 import withAuthorization from '../Session/withAuthorization';
 import { db } from '../../firebase';
@@ -49,8 +50,8 @@ class Overview extends Component {
 
 
     return (
-      <div> 
-        <GridList cellHeight={180} className="gridList">
+      <div className="grid_list_div"> 
+        <GridList spacing={20} cellHeight={200} className="gridList">
           <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
             <ListSubheader component="div">Volunteer Opportunities</ListSubheader>
           </GridListTile>
