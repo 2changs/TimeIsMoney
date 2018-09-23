@@ -60,7 +60,7 @@ class Overview extends Component {
               <img src={tile.img} alt={tile.title} />
               <GridListTileBar
                 title={tile.title}
-                subtitle={<span>by: {tile.author}</span>}
+                subtitle={<span>Distance: {tile.distance}</span>}
                 actionIcon={
                   <IconButton>
                     <InfoIcon />
