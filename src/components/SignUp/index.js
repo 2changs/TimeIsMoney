@@ -8,8 +8,8 @@ import { auth, db } from '../../firebase';
 import * as routes from '../../constants/routes';
 
 const SignUpPage = ({ history }) =>
-  <div>
-    <h1>SignUp</h1>
+  <div className="div_form">
+    <h2>SignUp</h2>
     <SignUpForm history={history} />
   </div>
 
@@ -82,30 +82,34 @@ class SignUpForm extends Component {
     return (
       <form onSubmit={this.onSubmit}>
         <input
+          className="input_field"
           value={username}
           onChange={event => this.setState(updateByPropertyName('username', event.target.value))}
           type="text"
           placeholder="Full Name"
         />
         <input
+          className="input_field"        
           value={email}
           onChange={event => this.setState(updateByPropertyName('email', event.target.value))}
           type="text"
           placeholder="Email Address"
         />
         <input
+          className="input_field"        
           value={passwordOne}
           onChange={event => this.setState(updateByPropertyName('passwordOne', event.target.value))}
           type="password"
           placeholder="Password"
         />
         <input
+          className="input_field"        
           value={passwordTwo}
           onChange={event => this.setState(updateByPropertyName('passwordTwo', event.target.value))}
           type="password"
           placeholder="Confirm Password"
         />
-        <button disabled={isInvalid} type="submit">
+        <button className="btn" disabled={isInvalid} type="submit">
           Sign Up
         </button>
 
