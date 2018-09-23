@@ -1,0 +1,15 @@
+.nav {
+	background-color: white !important;
+	border-bottom: 5px solid #F7882F;
+	height: 55px;
+}
+
+.logo {
+	color: black;
+	text-decoration: none;
+}
+
+.menu {
+	margin-left: -1px;
+	float: left;
+}

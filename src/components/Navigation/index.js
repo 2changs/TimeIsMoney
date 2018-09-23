@@ -4,12 +4,13 @@ import { connect } from 'react-redux';
 // import PropTypes from 'prop-types';
 import { AppBar, Toolbar, Typography } from '@material-ui/core/';
 // import MenuIcon from '@material-ui/icons/Menu';
+import './index.css'
 
 import SignOutButton from '../SignOut';
 import * as routes from '../../constants/routes';
 
 const Navigation = ({ authUser }) =>
-  <AppBar position="static">
+  <AppBar className={"nav"} position="static">
     { authUser
         ? <NavigationAuth />
         : <NavigationNonAuth />
@@ -18,18 +19,20 @@ const Navigation = ({ authUser }) =>
 
 const NavigationAuth = () =>
   <Toolbar>
-    <Link to={routes.LANDING}><Typography> Landing </Typography> </Link>
-    <Link to={routes.HOME}>Home</Link>
-    <Link to={routes.ACCOUNT}>Account</Link>
-    <Link to={routes.OVERVIEW}>Overview</Link>
+    <Link className={"logo"} to={routes.HOME}>vinder</Link>
+    <div className={"menu"}>
+      <Link to={routes.ACCOUNT}>Account</Link>
+      <Link to={routes.OVERVIEW}>Overview</Link>
+    </div>
     <SignOutButton />
   </Toolbar>
 
 const NavigationNonAuth = () =>
-  <ul>
-    <li><Link to={routes.LANDING}>Landing</Link></li>
-    <li><Link to={routes.SIGN_IN}>Sign In</Link></li>
-  </ul>
+  <Toolbar>
+    <Link to={routes.LANDING}>vinder</Link>
+    <Link to={routes.SIGN_IN}>Sign In</Link>
+    <SignOutButton />
+  </Toolbar>
 
 const mapStateToProps = (state) => ({
   authUser: state.sessionState.authUser,
