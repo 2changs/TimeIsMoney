@@ -1,0 +1,10 @@
+button {
+	background-color: white !important;
+	font-family: 'Source Sans Pro', sans-serif;
+	color: black;
+     border:none; 
+     font-size: 33px;
+    padding: 0px 12px;
+     cursor: pointer;
+     text-decoration: none;
+ }

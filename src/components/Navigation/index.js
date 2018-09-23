@@ -14,16 +14,18 @@ const Navigation = ({ authUser }) =>
     { authUser
         ? <NavigationAuth />
         : <NavigationNonAuth />
-    }
+    } 
+
   </AppBar>
 
 const NavigationAuth = () =>
   <Toolbar>
-    <Link className={"logo"} to={routes.HOME}>vinder</Link>
-    <div className={"menu"}>
-      <Link to={routes.ACCOUNT}>Account</Link>
-      <Link to={routes.OVERVIEW}>Overview</Link>
+   <div className={"menu"}>
     </div>
+    <Link className={"logo"} to={routes.HOME}>Vinder</Link>
+    <Link className={"accountLogo"} to={routes.ACCOUNT}>Account</Link>
+    <Link className={"overviewLogo"} to={routes.OVERVIEW}>Overview</Link>
+
     <SignOutButton />
   </Toolbar>
 
