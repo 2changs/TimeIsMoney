@@ -5,13 +5,20 @@ import { compose } from 'recompose';
 import withAuthorization from '../Session/withAuthorization';
 import { db } from '../../firebase';
 
-class OverviewPage extends Component {
+class Overview extends Component {
+  constructor(props) {
+    super(props);
+    db.getRichmond().then(snapshot =>
+      this.title = snapshot.val()
+    );
+  }
+
   componentDidMount() {
     const { onSetUsers } = this.props;
 
     db.onceGetUsers().then(snapshot =>
       onSetUsers(snapshot.val())
-    );
+    );   
   }
 
   render() {
@@ -19,8 +26,10 @@ class OverviewPage extends Component {
 
     return (
       <div>
-        overview
+        {this.title}
+        
       </div>
+        
     );
   }
 }
@@ -38,4 +47,4 @@ const authCondition = (authUser) => !!authUser;
 export default compose(
   withAuthorization(authCondition),
   connect(mapStateToProps, mapDispatchToProps)
-)(OverviewPage);
+)(Overview);
