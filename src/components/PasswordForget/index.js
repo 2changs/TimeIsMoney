@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import "./index.css";
 
 import { auth } from '../../firebase';
 import * as routes from '../../constants/routes';
@@ -67,7 +68,7 @@ class PasswordForgetForm extends Component {
 }
 
 const PasswordForgetLink = () =>
-  <p>
+  <p className="login_link">
     <Link to={routes.PASSWORD_FORGET}>Forgot Password?</Link>
   </p>
 

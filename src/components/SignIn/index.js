@@ -5,10 +5,11 @@ import { SignUpLink } from '../SignUp';
 import { PasswordForgetLink } from '../PasswordForget';
 import { auth } from '../../firebase';
 import * as routes from '../../constants/routes';
+import "./index.css";
 
 const SignInPage = ({ history }) =>
-  <div>
-    <h1>SignIn</h1>
+  <div className="div_form">
+    <h2>LOG IN</h2>
     <SignInForm history={history} />
     <PasswordForgetLink />
     <SignUpLink />
@@ -67,19 +68,21 @@ class SignInForm extends Component {
     return (
       <form onSubmit={this.onSubmit}>
         <input
+          className="input_field"
           value={email}
           onChange={event => this.setState(updateByPropertyName('email', event.target.value))}
           type="text"
           placeholder="Email Address"
         />
         <input
+          className="input_field"
           value={password}
           onChange={event => this.setState(updateByPropertyName('password', event.target.value))}
           type="password"
           placeholder="Password"
         />
-        <button disabled={isInvalid} type="submit">
-          Sign In
+        <button className="btn" disabled={isInvalid} type="submit">
+          SIGN IN
         </button>
 
         { error && <p>{error.message}</p> }

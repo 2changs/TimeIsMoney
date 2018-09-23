@@ -24,14 +24,13 @@ const NavigationAuth = () =>
       <Link to={routes.ACCOUNT}>Account</Link>
       <Link to={routes.OVERVIEW}>Overview</Link>
     </div>
-    <SignOutButton />
+   <SignOutButton />
   </Toolbar>
 
 const NavigationNonAuth = () =>
   <Toolbar>
     <Link to={routes.LANDING}>vinder</Link>
-    <Link to={routes.SIGN_IN}>Sign In</Link>
-    <SignOutButton />
+    <button className="sign_in_out"> <Link className="nav_link" to={routes.SIGN_IN}>LOG IN</Link> </button>
   </Toolbar>
 
 const mapStateToProps = (state) => ({

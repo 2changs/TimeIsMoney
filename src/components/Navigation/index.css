@@ -1,7 +1,7 @@
 .nav {
 	background-color: white !important;
-	border-bottom: 5px solid #F7882F;
-	height: 55px;
+	border-bottom: 1px solid gray;
+	height: 70px;
 }
 
 .logo {
@@ -12,4 +12,37 @@
 .menu {
 	margin-left: -1px;
 	float: left;
+}
+
+.sign_in_out {
+	-moz-box-shadow:inset 0px 39px 0px -24px #fd5608;
+	-webkit-box-shadow:inset 0px 39px 0px -24px #fd5608;
+	box-shadow:inset 0px 39px 0px -24px #fd5608;
+	background-color:#fd5067;
+	-moz-border-radius:7px;
+	-webkit-border-radius:7px;
+	border-radius:7px;
+	border:1px solid #fd5608;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:16px;
+	padding:10px 19px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #fd5608;
+	float: right;
+	position: absolute;
+	margin-left: 85%;
+}
+.sign_in_out :hover {
+	background-color:#fd5608;
+}
+.sign_in_out :active {
+	position:relative;
+	top:1px;
+}
+
+.nav_link {
+	text-decoration: none !important;
+	color: white;
 }
