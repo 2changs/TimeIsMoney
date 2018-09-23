@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { compose } from 'recompose';
-import Cards from '../Cards/';
 
 import withAuthorization from '../Session/withAuthorization';
 import { db } from '../../firebase';
 
-class HomePage extends Component {
+class OverviewPage extends Component {
   componentDidMount() {
     const { onSetUsers } = this.props;
 
@@ -20,21 +19,11 @@ class HomePage extends Component {
 
     return (
       <div>
-        <Cards />
+        overview
       </div>
     );
   }
 }
-
-const UserList = ({ users }) =>
-  <div>
-    <h2>List of Usernames of Users</h2>
-    <p>(Saved on Sign Up in Firebase Database)</p>
-
-    {Object.keys(users).map(key =>
-      <div key={key}>{users[key].username}</div>
-    )}
-  </div>
 
 const mapStateToProps = (state) => ({
   users: state.userState.users,
@@ -49,4 +38,4 @@ const authCondition = (authUser) => !!authUser;
 export default compose(
   withAuthorization(authCondition),
   connect(mapStateToProps, mapDispatchToProps)
-)(HomePage);
+)(OverviewPage);

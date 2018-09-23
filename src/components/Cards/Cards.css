@@ -1,0 +1,16 @@
+.Cards {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.Wrapper {
+	height: 100%;
+	display: flex;
+	justifyContent: center;
+	alignItems: center;
+	width: 100%;
+	minHeight: 100vh;
+	fontFamily: sans-serif;
+	overflow: hidden;
+}
