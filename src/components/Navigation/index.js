@@ -31,8 +31,8 @@ const NavigationAuth = () =>
 
 const NavigationNonAuth = () =>
   <Toolbar>
-    <Link to={routes.LANDING}>vinder</Link>
-    <Link to={routes.SIGN_IN}>Sign In</Link>
+  <Link className={"landing"} to={routes.LANDING}>Landing</Link>
+    <Link className={"signin"} to={routes.SIGN_IN}>Account</Link>
     <SignOutButton />
   </Toolbar>
 

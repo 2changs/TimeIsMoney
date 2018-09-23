@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
 .app {
+	background-color: #FF7F50 !important;
 	font-family: 'Source Sans Pro', sans-serif;
 }
